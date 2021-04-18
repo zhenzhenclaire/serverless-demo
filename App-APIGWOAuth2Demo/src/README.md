@@ -2,7 +2,7 @@
 ## 操作步骤
 **步骤一：认证服务器和授权服务器的搭建（以flask demo为例）**
 
-1.在API网关官方仓库中下载Flask Demo。 本Demo包含四个API：
+1.使用该模板创建云函数。 本Demo为使用Flask构建的应用，包含四个API：
 
 `/login`：用于登陆，跳转到登陆页面进行用户名密码认证
 
@@ -11,11 +11,6 @@
 `/generate`：用于验证授权码，颁发token
 
 `/verify`：用于校验token是否有效
-
-2.生成RSA公钥和私钥。使用python3运行produce_key.py，生成public_pem、priv_pem和pulic
-
-3.使用sf部署Flask应用，部署成功后，会生成云函数和对应的API网关访问地址（即认证服务器地址）。
-
 
 **步骤二：配置API网关的授权API**
 1. 在已创建的服务中，创建授权 API，前端配置时，鉴权类型选择 OAuth2.0，OAuth 模式选择授权 API。
