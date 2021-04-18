@@ -124,7 +124,6 @@ def generate():
     else:
         return "invalid"
 
-
 @app.route('/code')
 def code():
     username = request.args.get("username")
